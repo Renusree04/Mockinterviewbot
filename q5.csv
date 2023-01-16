@@ -1,0 +1,25 @@
+﻿Label,Ans
+Wrong,Confused about the correct answer
+Wrong,Not sure
+Right,To discover its characteristics in order to evaluate its suitability for various applications or compare it with other algorithms for the same application
+Wrong,There are no too many influencing factors
+Right,Algorithm analysis is an important part of computational complexity theory  which provides theoretical estimation for the required resources of an algorithm to solve a specific computational problem
+Right,To predict the behavior of an algorithm without implementing it on a specific computer
+Wrong,It is not impossible to predict the exact behavior of an algorithm
+Wrong,I dont really know
+Wrong,An algorithm in data mining  or machine learning is a set of heuristics and calculations that creates a model from data
+Right,We can compare them to determine the best one for our purpose when we calculate the lower bound
+Right,The analysis is a process of estimating the efficiency of an algorithm
+Wrong,Not sur
+Right,It would be best to analyze every algorithm in terms of Time that relates to which one could execute faster and Memory corresponding to which one will take less memory
+Right,Analysing algorithms allow us to process that data in a meaningful way
+Right,An algorithm should have 0 or more well-defined inputs
+Wrong,I dont really know
+Right,It is much more convenient to have simple measures for the efficiency of an algorithm
+Wrong,Linear Regression is a method of measuring the relationship between two continuous variables
+Wrong,Space complexity is the key criteria
+Right,Define the input for which algorithm takes less time or minimum time
+Right,There are too many influencing factors
+Wrong,no idea
+Right,to implement the algorithm and test the efficiency every time a certain parameter in the underlying computer system changes
+Right,It's accuracy is increased and potential mistakes are minimized

@@ -1,0 +1,25 @@
+﻿Label,Ans
+Right,The data items in a multidimensional array are stored in the form of rows and columns
+Wrong,Not sure
+RIght,The elements in multidimensional arrays can be stored in linear storage using two methods that is in row-major order or column-major order
+Wrong,Array are not represented by braces in codes
+Right,The memory is allocated for the multidimensional array in contiguous form
+Right,A two-dimensional array is a tabular representation of data in which the elements are kept in rows and columns
+Right, M X N elements are arranged in M rows and N columns to form a two-dimensional array
+Wrong,Not known
+Wrong,The size of every dimension in the multidimensional array needs not to be declared initially
+Right,To access any location to place the element in a two-dimensional array provide the row and column location in the code
+Wrong,Pointers are not used for allocation
+Wrong,I dont really know
+Right,An array elements are always stored in sequential memory locations
+Wrong,Elements can be stored without indexing
+Wrong,Its similar to general programming language
+Wrong,Im not sure
+Right,The purpose of arrays is to enable random access so it must be possible to go from an array index to the memory address of the value
+Right,Wrong arrangement
+Wrong,While indexing the number in the first set of brackets represent columns and second represents rows
+Right,Each cell in a two dimensional array can be accessed array through two indexes that can specify the row number and column number respectively accessed and is represented in a matrix form or tabular form
+Wrong,Brackets can be removed while indexing
+Right,If the size of the declared array is more than the required size then  it can lead to memory wastage
+Wrong,I dont really know
+Right,To declare a 2D array  specify the type of elements that will be stored in the array

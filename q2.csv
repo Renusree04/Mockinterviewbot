@@ -1,0 +1,25 @@
+Label,Ans
+Wrong ,Means the fixed action performed
+Wrong ,Dynamic data allocation can be also done similar to static
+Right,In Dynamic data structure the size of the structure in not fixed and can be modified during the operations performed on it
+Wrong ,It’s the same as static data structure
+Right,Dynamic data structures are designed to facilitate change of data structures in the run time
+Right,For dynamic data structures memory is not provided contiguously so users have to provide an external structure to store the location
+Right,Dynamic data structures are data structures that grow and shrink as you need them to by allocating and deallocating memory from a place called the heap
+Wrong ,I dont really know
+Wrong ,Not sure
+Right,Dynamic Data Structure is that kind of data structure that changes its size during runtime
+Wrong ,A dynamic data structure is an organization or collection of data in memory which have a fixed size
+Right,The values stored in the data structure can be changed easily either it be static or dynamic data structure
+Right,A dynamic data structure (DDS) refers to an organization or collection of data in  memory that has the flexibility to grow or shrink in size enabling a programmer to control exactly how much memory is used
+Wrong ,It means energetic or capable of changing in science terms
+Right,Dynamic data structures stand in contrast to static data structures (SDS) wherein in the case of the latter the size of the structure is fixed
+Right,Dynamic data structures provide easy access to elements
+Right,It can be modified during the operations performed on it
+Wrong ,No idea
+Wrong ,The dynamic characteristic shows the compilation of the data
+Right,A dynamic data structure is a type of data structure that has the ability to change its size as per the requirement of storage
+Right,This means that the size of the data structure is not fixed and it may shrink with the utilization of memory
+Right,The size of the data structure can be modified after initialization
+Wrong ,Not sure
+Wrong ,It can store a limited amount of elements or data in it
