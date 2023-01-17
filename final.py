@@ -5,8 +5,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn import svm
 from random import choice
 
-question_bank =  [
-   {
+question_bank  =  [ 
+{
         'question' : 'What is a Data Structure?',
         'file' : 'q1.csv',
         'hint' : 'Array is a Data Structure.'
@@ -19,7 +19,7 @@ question_bank =  [
      {
         'question' : 'How are the elements of a 2D Array stored in the memory?',
         'file' : 'q3.csv',
-        'hint' : 'AI is being used in our chatbot'
+        'hint' : 'Think about how it will be easy to retrive the data'
     },
      {
         'question' : 'What is a linked list?',
@@ -29,10 +29,11 @@ question_bank =  [
      {
         'question' : 'Why do we need to do an algorithm analysis?',
         'file' : 'q5.csv',
-        'hint' : 'AI is being used in our chatbot'
+        'hint' : 'Think about the efficiency'
     }
    
 ]
+   
 
 replies = ['Okay...','Fine....','Hm...','I see....']
 
@@ -44,7 +45,7 @@ def speech_to_text():
        r.adjust_for_ambient_noise(source)
     print("Answer!")
     with m as source:
-       audio = r.record(source,duration=5)
+       audio = r.record(source,duration=15)
        print("Got it! ")
     try:
             # recognize speech using Google Speech Recognition
@@ -90,14 +91,13 @@ count = 0
 for question_number in question_bank:
     print(f"\n{question_number['question']}")
     train_data(tv, model, question_number['file'])
-    # print(result)
-user_ans=speech_to_text()
-result = check_ans(tv, model, user_ans)
-count += 1
-if result == "Right":
+    user_ans=speech_to_text()
+    result = check_ans(tv, model, user_ans)
+    count += 1
+    if result == "Right":
         print(f"Bot: {choice(replies)}")
         score+=10
-else:
+    else:
         print(f"Bot :Hmm..., I'll give you a hint - {question_number['hint']}")
         user_ans =speech_to_text()
         result = check_ans(tv, model, user_ans)
