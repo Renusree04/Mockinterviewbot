@@ -1,0 +1,4 @@
+pandas
+sklearn
+random
+speech_recognition
