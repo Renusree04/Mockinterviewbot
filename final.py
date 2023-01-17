@@ -1,5 +1,6 @@
 import speech_recognition as sr
 import pandas as pd
+import pickle
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn import svm
@@ -75,6 +76,7 @@ def train_data(tv, model, file):
     # Train data
     features = tv.fit_transform(ans_train)
     model.fit(features,label_train)
+    pickle.dump(model,open('result.pkl','wb'))
 
 
 def check_ans(tv, model, user_ans):
