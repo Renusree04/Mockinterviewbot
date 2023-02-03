@@ -6,7 +6,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn import svm
 from random import choice
-
+import pyttsx3
+pyobj=pyttsx3.init()
 question_bank  =  [ 
 {
         'question' : 'What is a Data Structure?',
@@ -42,12 +43,18 @@ replies = ['Okay...','Fine....','Hm...','I see....']
 def speech_to_text():
     r = sr.Recognizer()
     m = sr.Microphone()
+    pyobj.say("A moment of silence, please")
+    pyobj.runAndWait()
     print("A moment of silence, please...")
     with m as source: 
        r.adjust_for_ambient_noise(source)
+    pyobj.say("Answer")
+    pyobj.runAndWait()
     print("Answer!")
     with m as source:
        audio = r.record(source,duration=15)
+       pyobj.say("Got it!")
+       pyobj.runAndWait()
        print("Got it! ")
     try:
             # recognize speech using Google Speech Recognition
@@ -55,11 +62,15 @@ def speech_to_text():
         user_ans=format(value)
         print("You said",user_ans)
     except sr.UnknownValueError:
+        pyobj.say("Oops! Didn't catch that")
+        pyobj.runAndWait()
         print("Oops! Didn't catch that")#not ans in duration
         user_ans=speech_to_text()
         #user_ans="I don't know"
     
     except sr.RequestError as e:
+        pyobj.say("No internet connection")
+        pyobj.runAndWait()
         print("No internet connection")
         sys.exit()
         
