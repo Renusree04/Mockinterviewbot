@@ -6,7 +6,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn import svm
 from random import choice
 from gingerit.gingerit import GingerIt
-
+import pyttsx3
+pyobj=pyttsx3.init()
 question_bank  =  [ 
 {
         'question' : 'What is a Data Structure?',
@@ -42,25 +43,35 @@ replies = ['Okay...','Fine....','Hm...','I see....']
 def speech_to_text():
     r = sr.Recognizer()
     m = sr.Microphone()
+    pyobj.say("A moment of silence, please")
     print("A moment of silence, please...")
+    pyobj.runAndWait()
     with m as source: 
        r.adjust_for_ambient_noise(source)
+    pyobj.say("Answer")
     print("Answer!")
+    pyobj.runAndWait()
     with m as source:
        audio = r.record(source,duration=15)
+       pyobj.say("Got it!")
        print("Got it! ")
+       pyobj.runAndWait()
     try:
             # recognize speech using Google Speech Recognition
         value = r.recognize_google(audio) # Don't print
         user_ans=format(value)
         print("You said",user_ans)
     except sr.UnknownValueError:
+        pyobj.say("Oops! Didn't catch that")
         print("Oops! Didn't catch that")#not ans in duration
+        pyobj.runAndWait()
         user_ans=speech_to_text()
         #user_ans="I don't know"
     
     except sr.RequestError as e:
+        pyobj.say("No internet connection")
         print("No internet connection")
+        pyobj.runAndWait()
         sys.exit()
         
     return user_ans
@@ -119,4 +130,6 @@ for question_number in question_bank:
         print(f"Bot: {choice(replies)}")
 
 final_score = ((score+(g_score/2))
+pyobj.say("Your score is {final_score}")
+pyobj.runAndWait()
 print(f"\nScore: {final_score}\n")
