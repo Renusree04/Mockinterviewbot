@@ -103,7 +103,7 @@ model = svm.SVC()
 score = 0
 count = 0
 g_score=100
-st.title('Welcome to mock interview bot')
+st.title('Welcome to mock interview ')
 for question_number in question_bank:
     st.header(f"\n{question_number['question']}")
     train_data(tv, model, question_number['file'])
