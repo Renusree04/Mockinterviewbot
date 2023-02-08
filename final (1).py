@@ -1,3 +1,4 @@
+import streamlit as st
 import speech_recognition as sr
 import pandas as pd
 import pickle
@@ -66,7 +67,7 @@ def speech_to_text():
         print("Oops! Didn't catch that")#not ans in duration
         pyobj.runAndWait()
         user_ans=speech_to_text()
-        #user_ans="I don't know"
+        user_ans="I don't know"
     
     except sr.RequestError as e:
         pyobj.say("No internet connection")
@@ -102,9 +103,9 @@ model = svm.SVC()
 score = 0
 count = 0
 g_score=100
-
+st.title('Welcome to mock interview bot')
 for question_number in question_bank:
-    print(f"\n{question_number['question']}")
+    st.header(f"\n{question_number['question']}")
     train_data(tv, model, question_number['file'])
     user_ans=speech_to_text()
     parser=GingerIt()
@@ -119,17 +120,15 @@ for question_number in question_bank:
     result = check_ans(tv, model, user_ans)
     count += 1
     if result == "Right":
-        print(f"Bot: {choice(replies)}")
+        st.header(f"Bot: {choice(replies)}")
         score+=10
     else:
-        print(f"Bot :Hmm..., I'll give you a hint - {question_number['hint']}")
+        st.header(f"Bot :Hmm..., I'll give you a hint - {question_number['hint']}")
         user_ans =speech_to_text()
         result = check_ans(tv, model, user_ans)
         if result == "Right":
             score += 5
-        print(f"Bot: {choice(replies)}")
+        st.header(f"Bot: {choice(replies)}")
 
-final_score = ((score+(g_score/2))
-pyobj.say("Your score is {final_score}")
-pyobj.runAndWait()
-print(f"\nScore: {final_score}\n")
+final_score = ((score+(g_score/2)))
+st.header(f"\nScore: {final_score}\n")
